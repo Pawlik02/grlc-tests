@@ -4,6 +4,8 @@
 #+ tags: [ "json" ]
 #+ method: "GET"
 #+ pagination: 100
+#+ limit: 100
+#+ offset: 0
 #+ transform: {
 #+   "description": "?info",
 #+   "$anchor": "description",
