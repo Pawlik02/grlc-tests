@@ -67,6 +67,5 @@ WHERE {
        SELECT (count(*) as ?total) WHERE { ?x a sosa:Observation }
 
     }
-    OPTIONAL { ?s ?p ?_page } 
     BIND (URI(CONCAT('https://w3id.org/iliad/api/v1.0/Observations?$top=',xsd:integer(?_limit),'$skip=', xsd:integer(?_offset)+xsd:integer(?_limit))) AS ?next_link)
 }
