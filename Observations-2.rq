@@ -3,7 +3,6 @@
 #+ endpoint: "https://www.foodie-cloud.org/sparql?default-graph-uri=http://w3id.org/iliad/dataaset/jf-pilot-sample"
 #+ tags: [ "json" ]
 #+ method: "GET"
-#+ pagination: 100
 #+ limit: 100
 #+ transform: {
 #+   "description": "?info",
