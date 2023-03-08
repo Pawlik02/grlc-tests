@@ -13,7 +13,7 @@
 #+     "@iot.id": "?id",
 #+     coordinates:
 #+        - "?lat_n",
-#+        - "?long_n"
+#+        - "?long_n",
 #+     },
 #+   }
 
