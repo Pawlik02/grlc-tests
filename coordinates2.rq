@@ -14,6 +14,7 @@
 #+     "coordinates": ["?lat_n", "?long_n"],
 #+     tests: [12.11, 9.81]
 #+     },
+#+   "coordinates": ["?lat_n", "?long_n"],
 #+   }
 
 PREFIX iliad-api: <https://w3id.org/iliad/api>
