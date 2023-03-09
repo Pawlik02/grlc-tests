@@ -12,7 +12,8 @@
 #+   "value": {
 #+     "@iot.id": "?id",
 #+     "coordinates": ["?lat_n", "?long_n"],
-#+     tests: [12.11, 9.81]
+#+     tests: [12.11, 9.81],
+#+     "test2": "?lat_n",
 #+     },
 #+   }
 
