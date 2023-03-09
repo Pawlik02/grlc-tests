@@ -11,7 +11,8 @@
 #+   "$anchor": "description",
 #+   "value": {
 #+     "@iot.id": "?id",
-#+     "coordinates": ["?lat_n", "?long_n"],
+#+       "$alist": "coordinates"
+#+       "coordinates": ["?lat_n", "?long_n"],
 #+     },
 #+   }
 
