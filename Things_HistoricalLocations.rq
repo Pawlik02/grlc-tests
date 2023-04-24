@@ -60,3 +60,4 @@ WHERE {
     }
     BIND (URI(CONCAT('https://w3id.org/iliad/jf/api/v1.0/FeaturesOfInterest?$top=',xsd:integer(?_limit),'$skip=', xsd:integer(COALESCE(?_offset, 0))+xsd:integer(?_limit))) AS ?next_link)
 }
+ORDER BY ?location
