@@ -3,7 +3,7 @@
 #+ endpoint: "https://www.foodie-cloud.org/sparql?default-graph-uri=http://w3id.org/iliad/dataaset/jf-pilot-sample"
 #+ tags: [ "json" ]
 #+ method: "GET"
-#+ offset: 0
+#+ offset: 100
 #+ transform: {
 #+   "description": "?info",
 #+   "$anchor": "description",
@@ -66,6 +66,5 @@ WHERE {
        SELECT (count(*) as ?total) WHERE { ?x a sosa:Observation }
 
     }
-    OPTIONAL { ?s ?p ?_page } 
-    BIND (URI(CONCAT('https://w3id.org/iliad/api/v1.0/Observations?$top=100&$skip=', (xsd:integer(?_page)+1)*100)) AS ?next_link)
+    BIND (URI(CONCAT('https://w3id.org/iliad/api/v1.0/Observations?$skip=',xsd:integer(?_offset))) AS ?next_link)
 }
