@@ -36,10 +36,10 @@
     "BIND (URI(CONCAT('https://w3id.org/iliad/jf/api/v1.0/Observations(', ?id,')')) AS ?id_link)",
     "{ SELECT (count(*) as ?total) WHERE { ?x a sosa:Observation }}",
     "OPTIONAL {?result oim-jf:densityOfJF ?densityOfJF ; oim-jf:quantityOfJF ?quantityOfJF ; dwc:sampleSizeValue ?sampleSizeValue ; oim-jf:wormsConcept ?wormsConcept ; oim-jf:stingByJF ?stingByJF ; oim-jf:beachedJF ?beachedJF }",
-    "OPTIONAL { ?s ?p ?_page }",
     "BIND (URI(CONCAT('https://w3id.org/iliad/jf/api/v1.0/Observations?$top=',xsd:integer(?_limit),'&$skip=', xsd:integer(COALESCE(?_offset, 0))+xsd:integer(?_limit))) AS ?next_link)"
   ],
-  "$limit": 100,
+  "$limit": "?_limit",
+  "offset": "?_offset",
   "$orderby":["?id"],
   "$prefixes": {
     "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
@@ -54,6 +54,8 @@
     "summary": "Retrieves all the information about CYBELE datasets as a flat list (information about referenced resources can be retrieved with the /getResource method)",
     "endpoint": "https://www.foodie-cloud.org/sparql?default-graph-uri=http://w3id.org/iliad/dataaset/jf-pilot-sample",
     "tags": [ "tests" ],
-    "method": "GET"
+    "method": "GET",
+    "limit": 100,
+    "offset": 0
   }
 }
