@@ -39,7 +39,7 @@
     "BIND (URI(CONCAT('https://w3id.org/iliad/jf/api/v1.0/Observations?$top=',xsd:integer(?_limit),'&$skip=', xsd:integer(COALESCE(?_offset, 0))+xsd:integer(?_limit))) AS ?next_link)"
   ],
   "$limit": "?_limit",
-  "offset": "?_offset",
+  "$offset": "?_offset",
   "$orderby":["?id"],
   "$prefixes": {
     "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
